@@ -1,0 +1,24 @@
+/* LOGO */
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    color: var(--color-green);
+}
+
+/* Image */
+
+.logo__image {
+    width: 35px;
+    height: 35px;
+}
+
+/* Name */
+
+.logo__name {
+    font-size: var(--huge-font-size);
+}

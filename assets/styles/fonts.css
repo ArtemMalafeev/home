@@ -1,0 +1,13 @@
+/* FONTS */
+
+
+/* Raleway */
+
+@font-face {
+    font-family: Raleway;
+    font-weight: var(--font-medium);
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Raleway-Medium.woff2'),
+        url('../fonts/Raleway-Medium.woff');
+}

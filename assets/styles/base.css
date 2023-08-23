@@ -1,0 +1,19 @@
+/* BASE */
+
+
+/* Box-model */
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+/* Image */
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

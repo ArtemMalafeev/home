@@ -1,0 +1,26 @@
+/* VARIABLES */
+
+:root {
+    /* Colors */
+
+    --color-light-grey: hsl(150deg 10% 96%);
+    --color-green: hsl(135deg 23% 45%);
+    --color-light-green: hsl(145deg 25% 91%);
+    --color-dark: hsl(233deg 9% 19%);
+    --color-white: hsl(0deg 0% 100%);
+
+    /* Font and typography */
+
+    --page-font: 'Raleway';
+    --h1-font-size: 1.875rem; /* 30px */
+    --h2-font-size: 1.5rem; /* 24px */
+    --h3-font-size: 1.25rem; /* 20px */
+    --huge-font-size: 1.25rem; /* 20px */
+    --big-font-size: 1.125rem; /* 18px */
+    --normal-font-size: 1rem; /* 16px */
+    --small-font-size: .75rem; /* 12px */
+
+    /* Font weight */
+
+    --font-medium: 500;
+}

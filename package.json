@@ -1,0 +1,18 @@
+{
+  "name": "house",
+  "version": "1.0.0",
+  "description": "House site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Malafeev",
+  "license": "ISC",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.10.3",
+    "stylelint-config-clean-order": "^5.2.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3"
+  }
+}
