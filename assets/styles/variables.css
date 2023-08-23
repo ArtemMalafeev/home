@@ -3,11 +3,15 @@
 :root {
     /* Colors */
 
+    --color-grey: hsl(212deg 15% 35%);
     --color-light-grey: hsl(150deg 10% 96%);
     --color-green: hsl(135deg 23% 45%);
+    --color-dark-green: hsl(135deg 32% 32%);
     --color-light-green: hsl(145deg 25% 91%);
     --color-dark: hsl(233deg 9% 19%);
     --color-white: hsl(0deg 0% 100%);
+    --color-pink: hsl(312deg 49% 45%);
+
 
     /* Font and typography */
 
@@ -23,4 +27,5 @@
     /* Font weight */
 
     --font-medium: 500;
+    --font-bold: 700;
 }

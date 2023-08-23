@@ -11,3 +11,13 @@
     src: url('../fonts/Raleway-Medium.woff2'),
         url('../fonts/Raleway-Medium.woff');
 }
+
+@font-face {
+    font-family: Raleway;
+    font-weight: var(--font-bold);
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Raleway-Bold.woff2'),
+        url('../fonts/Raleway-Bold.woff');
+}
+

@@ -4,6 +4,7 @@
 /* Page */
 
 .page {
+    color: var(--color-dark);
     font-family: var(--page-font);
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);

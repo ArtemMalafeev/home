@@ -17,8 +17,27 @@
     height: 35px;
 }
 
+/* Icon */
+
+.logo__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 /* Name */
 
 .logo__name {
     font-size: var(--huge-font-size);
+}
+
+/* Logo small */
+
+.logo--small .logo__image {
+    width: 12px;
+    height: 12px;
+}
+
+.logo--small .logo__name {
+    font-size: var(--small-font-size);
 }

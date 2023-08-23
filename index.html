@@ -8,26 +8,22 @@
     <title>House</title>
 </head>
 
-<body class="page__body">
+<body class="page__body" id="page-body">
     <header class="header">
         <nav class="navigation">
             <div class="navigation__logo container logo">
                 <div class="logo__image">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
-                        fill="currentColor">
+                    <svg class="logo__icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                        viewBox="0 0 35 35" fill="currentColor">
                         <path
                             d="M18 0L20.4652 9.10444L27.4612 2.77806L24.6128 11.77L33.9186 10.2302L26.6609 16.2547L35.3219 19.9905L25.9593 21.1349L31.2256 28.9601L22.7306 24.861L22.9303 34.2911L18 26.25L13.0697 34.2911L13.2694 24.861L4.77438 28.9601L10.0407 21.1349L0.678125 19.9905L9.33906 16.2547L2.08144 10.2302L11.3872 11.77L8.53879 2.77806L15.5348 9.10444L18 0Z" />
                     </svg>
                 </div>
                 <p class="logo__name">Ink. House</p>
             </div>
-            <div class="navigation__section container">
-                <button class="navigation__toggle" id="nav-toggle" type="button" aria-label="Открыть мобильное меню.">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M4.6875 21.5625C4.6875 21.3139 4.78627 21.0754 4.96209 20.8996C5.1379 20.7238 5.37636 20.625 5.625 20.625H24.375C24.6236 20.625 24.8621 20.7238 25.0379 20.8996C25.2137 21.0754 25.3125 21.3139 25.3125 21.5625C25.3125 21.8111 25.2137 22.0496 25.0379 22.2254C24.8621 22.4012 24.6236 22.5 24.375 22.5H5.625C5.37636 22.5 5.1379 22.4012 4.96209 22.2254C4.78627 22.0496 4.6875 21.8111 4.6875 21.5625ZM4.6875 14.0625C4.6875 13.8139 4.78627 13.5754 4.96209 13.3996C5.1379 13.2238 5.37636 13.125 5.625 13.125H24.375C24.6236 13.125 24.8621 13.2238 25.0379 13.3996C25.2137 13.5754 25.3125 13.8139 25.3125 14.0625C25.3125 14.3111 25.2137 14.5496 25.0379 14.7254C24.8621 14.9012 24.6236 15 24.375 15H5.625C5.37636 15 5.1379 14.9012 4.96209 14.7254C4.78627 14.5496 4.6875 14.3111 4.6875 14.0625ZM4.6875 6.5625C4.6875 6.31386 4.78627 6.0754 4.96209 5.89959C5.1379 5.72377 5.37636 5.625 5.625 5.625H24.375C24.6236 5.625 24.8621 5.72377 25.0379 5.89959C25.2137 6.0754 25.3125 6.31386 25.3125 6.5625C25.3125 6.81114 25.2137 7.0496 25.0379 7.22541C24.8621 7.40123 24.6236 7.5 24.375 7.5H5.625C5.37636 7.5 5.1379 7.40123 4.96209 7.22541C4.78627 7.0496 4.6875 6.81114 4.6875 6.5625Z"
-                            fill="#4C5866" />
-                    </svg>
+            <div class="navigation__section container"">
+                <button class=" navigation__toggle" id="nav-toggle" type="button" aria-label="Открыть мобильное меню.">
+                <span class="navigation__toggle-line"></span>
                 </button>
                 <div class="navigation__menu" id="nav-menu">
                     <ul class="navigation__list">
@@ -42,18 +38,19 @@
                         </li>
                     </ul>
                 </div>
-                <a class="navigation__cart" aria-label="Перейти в корзину.">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <a class="navigation__cart navigation__cart--not-empty" aria-label="Перейти в корзину." tabindex="0">
+                    <svg class="navigation__cart-logo" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                        viewBox="0 0 22 22" fill="none">
                         <g clip-path="url(#clip0_8076_487)">
                             <path
                                 d="M8.24967 20.1667C8.75593 20.1667 9.16634 19.7563 9.16634 19.25C9.16634 18.7438 8.75593 18.3334 8.24967 18.3334C7.74341 18.3334 7.33301 18.7438 7.33301 19.25C7.33301 19.7563 7.74341 20.1667 8.24967 20.1667Z"
-                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path
                                 d="M18.3337 20.1667C18.8399 20.1667 19.2503 19.7563 19.2503 19.25C19.2503 18.7438 18.8399 18.3334 18.3337 18.3334C17.8274 18.3334 17.417 18.7438 17.417 19.25C17.417 19.7563 17.8274 20.1667 18.3337 20.1667Z"
-                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             <path
                                 d="M0.916992 0.916626H4.58366L7.04033 13.1908C7.12415 13.6128 7.35374 13.9919 7.68891 14.2617C8.02408 14.5315 8.44346 14.6749 8.87366 14.6666H17.7837C18.2139 14.6749 18.6332 14.5315 18.9684 14.2617C19.3036 13.9919 19.5332 13.6128 19.617 13.1908L21.0837 5.49996H5.50033"
-                                stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
                         <defs>
                             <clipPath id="clip0_8076_487">
@@ -67,18 +64,21 @@
     </header>
     <main class="main">
         <section class="hero">
-            <div class="hero__image">
-                <img src="assets/images/bird.png" alt="Голубь на ветке." width="195" height="239">
-            </div>
-            <div class="hero__information">
-                <h1 class="hero__title">
-                    Реплики картин от Ink. House
-                </h1>
-                <p class="hero__description">
-                    Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные
-                    цены.
-                </p>
-                <a class="hero__button" href="#">Продукция</a>
+            <div class="container">
+                <div class="hero__image">
+                    <img src="assets/images/bird.png" alt="Голубь на ветке." width="195" height="239">
+                </div>
+                <div class="hero__information">
+                    <h1 class="hero__title">
+                        Реплики картин от 
+                        <span>Ink. House</span>
+                    </h1>
+                    <p class="hero__description">
+                        Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные
+                        цены.
+                    </p>
+                    <a class="hero__button" href="#">Продукция</a>
+                </div>
             </div>
         </section>
         <section class="products">
@@ -203,6 +203,7 @@
     </footer>
 
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/navigation.js"></script>
 </body>
 
 </html>
