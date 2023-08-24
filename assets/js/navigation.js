@@ -5,7 +5,7 @@ const header = document.querySelector('.header');
 const menu = document.querySelector('.navigation__menu');
 
 document.onscroll = function() {
-    if (window.pageYOffset > 46)  {
+    if (window.pageYOffset > 48)  {
         navigation.classList.add('navigation--fixed');
         logo.classList.add('logo--small');
         menu.classList.add('navigation__menu--top');
