@@ -9,9 +9,14 @@
     --color-green: hsl(135deg 23% 45%);
     --color-dark-green: hsl(135deg 32% 32%);
     --color-light-green: hsl(145deg 25% 91%);
+    --color-grey-green: hsl(145deg 5% 55%);
     --color-dark: hsl(233deg 9% 19%);
     --color-white: hsl(0deg 0% 100%);
     --color-pink: hsl(312deg 49% 45%);
+    --color-yellow: #EEDB6D;
+    --color-light-yellow: #FAEB97;
+    --color-dark-yellow: #D9B949;
+
 
 
     /* Font and typography */

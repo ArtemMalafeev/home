@@ -1,0 +1,56 @@
+/* NEW */
+
+/* New */
+
+.new {
+    padding-block: 50px;
+    color: var(--color-white);
+    background: url('../../images/Rectangle.png');
+}
+
+/* Inner */
+
+.new__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* Header */
+
+.new__header {
+    display: flex;
+    column-gap: 10px;
+}
+
+/* Icon */
+
+.new__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+}
+
+/* Title */
+
+.new__title {
+    font-weight: var(--font-medium);
+    line-height: 100%;
+    color: var(--color-light-grey);
+}
+
+/* Description */
+
+.new__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    line-height: 140%;
+}
+
+/* Button */
+
+.new__link {
+    display: block;
+}

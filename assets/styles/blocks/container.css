@@ -3,8 +3,8 @@
 /* Container */
 
 .container {
-    max-width: 1110px;
     width: 100%;
+    max-width: 1110px;
     height: 100%;
     padding-inline: 1rem;
 }

@@ -19,9 +19,12 @@
 @import url('blocks/logo.css');
 @import url('blocks/hero.css');
 @import url('blocks/footer.css');
-
+@import url('blocks/new.css');
+@import url('blocks/about.css');
+@import url('blocks/catalog.css');
+@import url('blocks/card.css');
+@import url('blocks/swiper.css');
 
 /* Animations */
 
 @import url('animations/index.css');
-

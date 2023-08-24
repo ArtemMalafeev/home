@@ -1,0 +1,30 @@
+/* CATALOG */
+
+
+/* Catalog */
+
+.catalog {
+    padding-bottom: 60px;
+}
+
+/* Inner */
+
+.catalog__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* Items */
+
+.catalog__items {
+    margin: 0;
+    padding: 0;
+}
+
+/* Title */
+
+.catalog__title {
+    font-weight: var(--font-medium);
+    line-height: 110%;
+}

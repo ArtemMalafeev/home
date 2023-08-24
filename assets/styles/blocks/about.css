@@ -1,0 +1,37 @@
+/* ABOUT */
+
+
+/* About */
+
+.about {
+    padding-block: 60px;
+}
+
+/* Inner */
+
+.about__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;   
+}
+
+/* Title */
+
+.about__title {
+    font-weight: var(--font-medium);
+    line-height: 110%;
+}
+
+/* Employees */
+
+.about__employees {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Employee */
+
+.about__employee {
+    width: 80px;
+    height: 80px;
+}

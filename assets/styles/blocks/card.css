@@ -1,0 +1,52 @@
+/* CARD */
+
+
+/* Card */
+
+.card {
+    padding: 20px;
+    background-color: var(--color-light-green);
+}
+
+/* Description */
+
+.card__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Image */
+
+.card__image {
+    margin-bottom: 5px;
+}
+
+/* Author */
+
+.card__author {
+    color: var(--color-grey-green);
+}
+
+/* Title */
+
+.card__title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+}
+
+/* Buy */
+
+.card__buy {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+/* Price */
+
+.card__price {
+    font-size: var(--huge-font-size);
+    color: var(--color-green);
+}

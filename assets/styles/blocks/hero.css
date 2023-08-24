@@ -36,3 +36,9 @@
     line-height: 150%;
     color: var(--color-grey);
 }
+
+/* Button */
+
+.hero__button {
+    max-width: 154px;
+}

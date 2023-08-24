@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/styles/index.css">
     <title>House</title>
 </head>
@@ -31,17 +32,19 @@
                             <span class="navigation__toggle-line"></span>
                         </button>
                         <div class="navigation__menu" id="nav-menu">
-                            <ul class="navigation__list">
-                                <li class="navigation__item">
-                                    <a class="navigation__link" href="#">Репродуции</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a class="navigation__link" href="#">Новинки</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a class="navigation__link" href="#">О нас</a>
-                                </li>
-                            </ul>
+                            <div class="container">
+                                <ul class="navigation__list">
+                                    <li class="navigation__item">
+                                        <a class="navigation__link link link--dark" href="#">Репродуции</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a class="navigation__link link link--dark" href="#">Новинки</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a class="navigation__link link link--dark" href="#">О нас</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <a class="navigation__cart navigation__cart--not-empty" aria-label="Перейти в корзину."
                             tabindex="0">
@@ -88,7 +91,129 @@
                         Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные
                         цены.
                     </p>
-                    <a class="hero__button button" href="#">Продукция</a>
+                    <a class="hero__button button button--primary" href="#">Продукция</a>
+                </div>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <div class="catalog__inner">
+                    <h2 class="catalog__title">
+                        Репродукции
+                    </h2>
+                    <div class="swiper-grid">
+                        <div class="swiper">
+                            <ul class="catalog__items swiper-wrapper">
+                                <li class="catalog__item card swiper-slide">
+                                    <div class="card__description">
+                                        <div class="card__image">
+                                            <img src="assets/images/pictures/1.jpg" alt="Амур охотится с луком в лесу."
+                                                w="250" height="250">
+                                        </div>
+                                        <p class="card__author">
+                                            Марсель Руссо
+                                        </p>
+                                        <h3 class="card__title">
+                                            Охота Амура
+                                        </h3>
+                                        <p class="card__option">
+                                            Холст, масло (50х80)
+                                        </p>
+                                    </div>
+                                    <div class="card__buy">
+                                        <p class="card__price">
+                                            14 500 &#8381;
+                                        </p>
+                                        <button class="card__button button button--primary" type="button">В
+                                            корзину</button>
+                                    </div>
+                                </li>
+                                <li class="catalog__item card swiper-slide">
+                                    <div class="card__description">
+                                        <div class="card__image">
+                                            <img src="assets/images/pictures/1.jpg" alt="Амур охотится с луком в лесу."
+                                                w="250" height="250">
+                                        </div>
+                                        <p class="card__author">
+                                            Марсель Руссо
+                                        </p>
+                                        <h3 class="card__title">
+                                            Охота Амура
+                                        </h3>
+                                        <p class="card__option">
+                                            Холст, масло (50х80)
+                                        </p>
+                                    </div>
+                                    <div class="card__buy">
+                                        <p class="card__price">
+                                            14 500 &#8381;
+                                        </p>
+                                        <button class="card__button button button--primary" type="button">В
+                                            корзину</button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <section class="new">
+            <div class="container">
+                <div class="new__inner">
+                    <header class="new__header">
+                        <svg class="new__icon" xmlns="http://www.w3.org/2000/svg" width="50" height="49"
+                            viewBox="0 0 50 49" fill="none">
+                            <path
+                                d="M29.5277 14.1189L35.4131 8.79691L33.0169 16.3613L32.2781 18.6935L34.6917 18.2941L42.5201 16.9988L36.4147 22.0669L34.5323 23.6295L36.7787 24.5984L44.0646 27.7411L36.1884 28.7038L33.7601 29.0006L35.126 31.0302L39.5562 37.613L32.4099 34.1647L30.2065 33.1015L30.2583 35.5474L30.4264 43.4805L26.2788 36.7159L25 34.6303L23.7212 36.7159L19.5736 43.4805L19.7417 35.5474L19.7935 33.1015L17.5901 34.1647L10.4438 37.613L14.874 31.0302L16.2399 29.0006L13.8116 28.7038L5.93539 27.7411L13.2213 24.5984L15.4677 23.6295L13.5853 22.0669L7.47989 16.9988L15.3083 18.2941L17.7219 18.6935L16.9831 16.3613L14.5869 8.79691L20.4723 14.1189L22.2868 15.7598L22.9262 13.3984L25 5.73935L27.0738 13.3984L27.7132 15.7598L29.5277 14.1189Z"
+                                stroke="#EEDB6D" stroke-width="3" />
+                        </svg>
+                        <h2 class="new__title">
+                            Новая коллекция французских авторов
+                        </h2>
+                    </header>
+                    <div class="new__description">
+                        <p class="new__text">
+                            Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям,
+                            которые, в
+                            свою очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений.
+                        </p>
+                        <p class="new__text">
+                            Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую
+                            востребованность направлений прогрессивного развития.
+                        </p>
+                    </div>
+                    <a class="new__link button button--secondary" href="" type="button">Ознакомиться</a>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__inner">
+                    <h2 class="about__title">
+                        Наша команда
+                    </h2>
+                    <p class="about__information">
+                        Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить
+                        значение
+                        экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться
+                        от того,
+                        что консультация с широким активом.
+                    </p>
+                    <div class="about__employees">
+                        <div class="about__employee">
+                            <img src="assets/images/employees/employee_1.png" width="80" height="80" alt="">
+                        </div>
+                        <div class="about__employee">
+                            <img src="assets/images/employees/employee_2.png" width="80" height="80" alt="">
+                        </div>
+                        <div class="about__employee">
+                            <img src="assets/images/employees/employee_3.png" width="80" height="80" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -214,6 +339,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/preload.js"></script>
