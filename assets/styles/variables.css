@@ -3,7 +3,8 @@
 :root {
     /* Colors */
 
-    --color-grey: hsl(212deg 15% 35%);
+    --color-grey: hsl(213deg 15% 35%);
+    --color-medium-grey: hsl(145deg 5% 55%);
     --color-light-grey: hsl(150deg 10% 96%);
     --color-green: hsl(135deg 23% 45%);
     --color-dark-green: hsl(135deg 32% 32%);

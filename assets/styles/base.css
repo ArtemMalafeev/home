@@ -17,3 +17,10 @@ img {
     height: auto;
     object-fit: cover;
 }
+
+
+/* Animation */
+
+.preload * {
+    transition: none !important;
+}

@@ -9,7 +9,8 @@
     font-style: normal;
     font-display: swap;
     src: url('../fonts/Raleway-Medium.woff2'),
-        url('../fonts/Raleway-Medium.woff');
+        url('../fonts/Raleway-Medium.woff'),
+        url('../fonts/Raleway-Medium.ttf');
 }
 
 @font-face {
@@ -18,6 +19,7 @@
     font-style: normal;
     font-display: swap;
     src: url('../fonts/Raleway-Bold.woff2'),
-        url('../fonts/Raleway-Bold.woff');
+        url('../fonts/Raleway-Bold.woff'),
+        url('../fonts/Raleway-Bold.ttf');
 }
 

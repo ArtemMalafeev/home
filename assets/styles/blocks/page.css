@@ -4,9 +4,19 @@
 /* Page */
 
 .page {
-    color: var(--color-dark);
-    font-family: var(--page-font);
+    height: 100vh;
+
+    font-family: var(--page-font), sans-serif;
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
+    color: var(--color-dark);
+
     background-color: var(--color-light-grey);
+}
+
+
+.page__body {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    height: 100%;
 }

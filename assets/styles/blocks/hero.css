@@ -18,9 +18,9 @@
 /* Title */
 
 .hero__title {
+    margin-bottom: 20px;
     font-size: var(--h1-font-size);
     font-weight: var(--font-medium);
-    margin-bottom: 20px;
     line-height: 100%;
 }
 
@@ -31,7 +31,8 @@
 /* Description */
 
 .hero__description {
+    margin-bottom: 40px;
     font-size: var(--normal-font-size);
-    color: var(--color-grey);
     line-height: 150%;
+    color: var(--color-grey);
 }

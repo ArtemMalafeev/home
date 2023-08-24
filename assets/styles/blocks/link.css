@@ -1,0 +1,56 @@
+/* LINK */
+
+
+/* Link */
+
+.link {
+    position: relative;
+
+    padding-bottom: 4px;
+
+    color: var(--color-medium-grey);
+
+    outline: none;
+
+    transition: color .2s ease-in-out;
+}
+
+.link::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+
+    width: 20%;
+    height: 2px;
+
+    background-color: var(--color-pink);
+
+    transition: transform .2s ease-in-out;
+}
+
+.link:hover {
+    color: var(--color-green);
+}
+
+.link:focus-visible {
+    color: var(--color-dark);
+}
+
+.link:active {
+    color: var(--color-dark-green);
+}
+
+.link:focus-visible::after,
+.link:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* --dark */
+
+.link--dark {
+    color: var(--color-dark);
+}
