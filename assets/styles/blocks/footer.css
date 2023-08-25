@@ -12,25 +12,27 @@
 /* Inner */
 
 .footer__inner {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-/* Logo */
-
-.footer__logo {
-    align-self: self-start;
-}
-
-/* Menu */
-
-.footer__menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 20px;
-    column-gap: 20px;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 510px) {
+    .footer__inner {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        align-items: flex-start;
+    }
+}
+
+/* Number */
+
+@media (min-width: 510px) {
+    .footer__number {
+        font-size: var(--huge-font-size);
+        white-space: nowrap;
+    }
 }
 
 /* Number description */
@@ -47,11 +49,69 @@
     row-gap: 6px;
 }
 
+
+/* Logo */
+
+.footer__column--logo {
+    grid-column: span 2;
+    flex-direction: row;
+}
+
+@media (min-width: 510px) {
+    .footer__column--logo {
+        justify-self: self-start
+    }
+}
+
+/* About */
+
+.footer__column--about .footer__column-title {
+    font-size: var(--huge-font-size);
+}
+
+
+@media (min-width: 510px) {
+    .footer__column--about {
+        
+        justify-self: end;
+    }
+    
+    .footer__column--about .footer__column-title {
+        font-size: var(--huge-font-size);
+    }
+}
+
+
+/* New */
+
+.footer__column--new .footer__column-title {
+    font-size: var(--huge-font-size);
+}
+
+@media (min-width: 510px) {
+    .footer__column--new {
+        justify-self: center;
+    }
+} 
+
+/* Phone */
+
+.footer__column--phone {
+    justify-self: flex-end;
+}
+
+
 /* Column title */
 
 .footer__column-title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
+}
+
+@media (min-width: 510px) {
+    .footer__column-title {
+        font-size: var(--huge-font-size);
+    }
 }
 
 /* Items */
@@ -64,7 +124,14 @@
 /* Link */
 
 .footer__link {
+    font-size: var(--normal-font-size);
     line-height: 150%;
+}
+
+@media (min-width: 690px) {
+    .footer__link {
+        font-size: var(--big-font-size);
+    }
 }
 
 /* Contact */

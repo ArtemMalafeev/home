@@ -4,7 +4,13 @@
 /* Card */
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+
     padding: 20px;
+
     background-color: var(--color-light-green);
 }
 
@@ -14,7 +20,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    margin-bottom: 30px;
 }
 
 /* Image */
@@ -23,10 +28,28 @@
     margin-bottom: 5px;
 }
 
+@media (min-width: 510px) {
+    .card__image {
+        height: 250px;
+    }
+}
+
+@media (min-width: 690px) {
+    .card__image {
+        height: 422px;
+    }
+}
+
 /* Author */
 
 .card__author {
     color: var(--color-grey-green);
+}
+
+@media (min-width: 690px) {
+    .card__author {
+        font-size: var(--big-font-size);
+    }
 }
 
 /* Title */
@@ -49,4 +72,19 @@
 .card__price {
     font-size: var(--huge-font-size);
     color: var(--color-green);
+}
+
+@media (min-width: 690px) {
+    .card__price {
+       font-size: 24px;
+    }
+}
+
+
+/* Option */
+
+@media (min-width: 690px) {
+    .card__option {
+       font-size: var(--color-big-font);
+    }
 }

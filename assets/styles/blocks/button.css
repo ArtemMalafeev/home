@@ -23,6 +23,13 @@
                 background-color .5s ease-in-out;
 }
 
+@media (min-width: 690px) {
+    .button {
+       font-size: var(--huge-font-size);
+    }
+}
+
+
 /* Primary */
 
 .button--primary {

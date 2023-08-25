@@ -16,7 +16,6 @@
 @import url('blocks/button.css');
 @import url('blocks/header.css');
 @import url('blocks/navigation.css');
-@import url('blocks/logo.css');
 @import url('blocks/hero.css');
 @import url('blocks/footer.css');
 @import url('blocks/new.css');
@@ -25,6 +24,7 @@
 @import url('blocks/card.css');
 @import url('blocks/swiper.css');
 @import url('blocks/tabs.css');
+@import url('blocks/logo.css');
 
 /* Animations */
 

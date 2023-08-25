@@ -38,6 +38,12 @@
     padding-bottom: 12px;
 }
 
+@media (min-width: 690px) {
+    .tabs__item {
+        padding-bottom: 30px;
+    }
+}
+
 .tabs__label {
     cursor: pointer;
 
@@ -58,6 +64,12 @@
 
     transition: color .2s ease-in-out,
                 background-color .2s ease-in-out;
+}
+
+@media (min-width: 690px) {
+    .tabs__label {
+        font-size: var(--huge-font-size);
+    }
 }
 
 .tabs__label:focus-visible {

@@ -25,6 +25,7 @@
 /* Title */
 
 .catalog__title {
+    font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
     line-height: 110%;
 }

@@ -18,6 +18,7 @@
 /* Title */
 
 .about__title {
+    font-size: var(--h2-font-size); 
     font-weight: var(--font-medium);
     line-height: 110%;
 }
@@ -29,9 +30,21 @@
     justify-content: space-between;
 }
 
+@media (min-width: 510px) {
+    .about__employees {
+        max-width: 300px;
+    }
+}
+
 /* Employee */
 
 .about__employee {
     width: 80px;
     height: 80px;
+}
+
+/* Information */
+
+.about__information {
+    line-height: 140%;
 }
