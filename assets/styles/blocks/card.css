@@ -6,8 +6,8 @@
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     row-gap: 20px;
+    justify-content: space-between;
 
     padding: 20px;
 
@@ -57,6 +57,7 @@
 .card__title {
     font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
+    line-height: 150%;
 }
 
 /* Buy */

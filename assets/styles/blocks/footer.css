@@ -54,12 +54,20 @@
 
 .footer__column--logo {
     grid-column: span 2;
+    justify-self: self-start;
     flex-direction: row;
 }
 
+/* Column title */
+
+.footer__column-title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
 @media (min-width: 510px) {
-    .footer__column--logo {
-        justify-self: self-start
+    .footer__column-title {
+        font-size: var(--huge-font-size);
     }
 }
 
@@ -72,7 +80,6 @@
 
 @media (min-width: 510px) {
     .footer__column--about {
-        
         justify-self: end;
     }
     
@@ -96,23 +103,12 @@
 
 /* Phone */
 
-.footer__column--phone {
-    justify-self: flex-end;
-}
-
-
-/* Column title */
-
-.footer__column-title {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-}
-
 @media (min-width: 510px) {
-    .footer__column-title {
-        font-size: var(--huge-font-size);
+    .footer__column--phone {
+        justify-self: flex-end;
     }
 }
+
 
 /* Items */
 
