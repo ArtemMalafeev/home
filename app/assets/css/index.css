@@ -1,6 +1,10 @@
 /* INDEX */
 
 
+/* Packages */
+
+@import url('../../../node_modules/swiper/swiper-bundle.css');
+
 /* Base */
 
 @import url('reset.css');

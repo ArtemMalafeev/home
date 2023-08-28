@@ -54,8 +54,8 @@
 
 .footer__column--logo {
     grid-column: span 2;
-    justify-self: self-start;
     flex-direction: row;
+    justify-self: self-start;
 }
 
 /* Column title */

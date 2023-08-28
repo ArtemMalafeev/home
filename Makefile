@@ -2,10 +2,10 @@ install:
 	npm install
 
 lint:
-	npx stylelint ./assets/styles/**/*.css
-	npx stylelint ./assets/styles/*.css
-	npx htmlhint ./*.html
+	npx stylelint 'app/assets/css/**/*.css'
+	npx stylelint 'app/assets/css/*.css'
+	npx htmlhint 'app/index.html'
 
 fix:
-	npx stylelint ./assets/styles/**/*.css --fix
-	npx stylelint ./assets/styles/*.css --fix
+	npx stylelint 'app/assets/css/**/*.css' --fix
+	npx stylelint 'app/assets/css/*.css' --fix
