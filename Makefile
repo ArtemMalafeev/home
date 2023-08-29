@@ -9,3 +9,6 @@ lint:
 fix:
 	npx stylelint 'app/assets/css/**/*.css' --fix
 	npx stylelint 'app/assets/css/*.css' --fix
+
+build:
+	gulp
