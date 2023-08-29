@@ -10,7 +10,6 @@ import avif from 'gulp-avif';
 import webp from 'gulp-webp';
 import imagemin from 'gulp-imagemin';
 import { deleteAsync } from 'del';
-import svgSprite from 'gulp-svg-sprite';
 import fonter from 'gulp-fonter';
 import ttf2woff2 from 'gulp-ttf2woff2';
 
