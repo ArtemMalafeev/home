@@ -173,6 +173,12 @@
     outline: none;
 }
 
+.footer__social-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .footer__social-link:hover,
 .footer__social-link:focus-visible {
     color: var(--color-green);

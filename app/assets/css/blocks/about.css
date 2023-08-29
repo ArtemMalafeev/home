@@ -48,3 +48,12 @@
 .about__information {
     line-height: 140%;
 }
+
+/* Image */
+
+.about__image {
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-medium-grey);
+    border-radius: 50%;
+}

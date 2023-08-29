@@ -1,57 +1,124 @@
 import gulp from 'gulp';
 import uglify from 'gulp-uglify-es';
-import browserSync from 'browser-sync';
+import browser from 'browser-sync';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import sourcemaps from 'gulp-sourcemaps';
 import htmlmin from 'gulp-htmlmin';
 import concat from 'gulp-concat';
+import avif from 'gulp-avif';
+import webp from 'gulp-webp';
+import imagemin from 'gulp-imagemin';
 import { deleteAsync } from 'del';
+import svgSprite from 'gulp-svg-sprite';
+import fonter from 'gulp-fonter';
+import ttf2woff2 from 'gulp-ttf2woff2';
 
-
-const { src, dest, watch, parallel, series } = gulp;
-const browser = browserSync.create();
 
 /* HTML */
 
 export const minifyHTML = () => {
-    return src([
+    return gulp.src([
         'app/index.html',
-        '!app/assets/index.min.html'
     ])
         .pipe(concat('index.min.html'))
         .pipe(htmlmin({ collapseWhitespace: true, }))
-        .pipe(dest('app'))
+        .pipe(gulp.dest('build'))
         .pipe(browser.stream());
 };
 
 /* Styles */
 
 export const minifyCSS = () => {
-    return src([
+    return gulp.src([
         'app/assets/css/index.css',
-        '!app/assets/css/index.min.css',
     ])
         .pipe(concat('index.min.css'))
         .pipe(cleanCSS({ compatibility: 'ie10' }))
-        .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version']}))
-        .pipe(dest('app/assets/css'))
+        .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
+        .pipe(gulp.dest('build/assets/css'))
         .pipe(browser.stream());
 };
 
 /* Scripts */
 
 export const minifyJS = () => {
-    return src([
+    return gulp.src([
         'node_modules/swiper/swiper-bundle.js',
         'app/assets/js/**/*.js',
-        '!app/assets/js/index.min.js',
     ])
         .pipe(concat('index.min.js'))
         .pipe(sourcemaps.init())
         .pipe(uglify.default())
-        .pipe(dest('app/assets/js'))
+        .pipe(gulp.dest('build/assets/js'))
         .pipe(browser.stream());
+};
+
+/* Images */
+
+export const minifyImages = () => {
+    return gulp.src([
+        'app/assets/images/**/*.{jpg,png}'
+    ])
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/assets/images'))
+};
+
+/* WebP */
+
+export const createWebP = () => {
+    return gulp.src([
+        'app/assets/images/**/*.{jpg,png}'
+    ])
+        .pipe(webp({ quality: 50 }))
+        .pipe(gulp.dest('build/assets/images'))
+};
+
+/* Avif */
+
+export const createAvif = () => {
+    return gulp.src([
+        'app/assets/images/**/*.{jpg,png}'
+    ])
+        .pipe(avif())
+        .pipe(gulp.dest('build/assets/images'))
+};
+
+
+/* Fonts */
+
+export const optimizeFonts = () => {
+    return gulp.src('app/assets/fonts/*.*')
+        .pipe(fonter({
+            formats: ['woff', 'ttf'],
+        }))
+        .pipe(gulp.src('build/assets/fonts/*.ttf'))
+        .pipe(ttf2woff2())
+        .pipe(gulp.dest('build/assets/fonts'))
+};
+
+/* Copy */
+
+export const copy = () => {
+    return gulp.src('app/assets/images/icons.svg')
+        .pipe(gulp.dest('build/assets/images'))
+};
+
+/* Watching */
+
+export const watching = () => {
+    browser.init({
+        server: {
+            baseDir: 'build',
+            index: 'index.min.html',
+        },
+        cors: true,
+        notify: false,
+        ui: false,
+    });
+    gulp.watch(['app/assets/css/**/*.css'], minifyCSS);
+    gulp.watch(['app/assets/js/**/*.js'], minifyJS);
+    gulp.watch(['app/index.html']).on('change', browser.reload);
 };
 
 /* Clean build */
@@ -60,33 +127,17 @@ export const cleanBuild = () => {
     return deleteAsync('build');
 };
 
-export const watching = () => {
-    watch(['app/assets/css/**/*.css', '!app/assets/css/index.min.css'], minifyCSS);
-    watch(['app/assets/js/**/*.js', '!app/assets/js/index.min.js'], minifyJS);
-    watch(['app/index.html'], minifyHTML);
-    watch(['app/index.html']).on('change', browser.reload);
-};
-
-
-export const server = () => {
-    browser.init({
-        server: {
-            baseDir: 'app',
-            index: 'index.min.html',
-        },
-        cors: true,
-        notify: false,
-        ui: false,
-    });
-};
-
-export default series(
+export default gulp.series(
     cleanBuild,
-    parallel(
+    copy,
+    minifyImages,
+    gulp.parallel(
+        optimizeFonts,
         minifyCSS,
         minifyJS,
         minifyHTML,
-        server,
+        createAvif,
+        createWebP,
         watching,
     ),
 );

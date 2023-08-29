@@ -5,12 +5,51 @@
 .new {
     padding-block: 50px;
     color: var(--color-white);
-    background: url('../../images/back/mobile/rectangle.png');
+    background-color: var(--color-medium-grey);
+    background-image: url('../../images/new/mobile.webp');
+}
+
+@media (min-resolution: 2dppx) {
+    .new {
+        background-image: url('../../images/new/mobile-2x.webp');
+    }
+}
+
+@media (min-width: 510px) {
+    .new {
+        background-image: url('../../images/new/tablet510.webp');
+    }
+}
+
+@media (min-width: 510px) and (min-resolution: 2dppx) {
+    .new {
+        background-image: url('../../images/new/tablet510-2x.webp');
+    }
 }
 
 @media (min-width: 690px) {
     .new {
         padding-block: 70px;
+        background-image: url('../../images/new/tablet690.webp');
+    }
+}
+
+@media (min-width: 690px) and (min-resolution: 2dppx) {
+    .new {
+        background-image: url('../../images/new/tablet690-2x.webp');
+    }
+}
+
+@media (min-width: 1440px) {
+    .new {
+        background-image: url('../../images/new/desktop.webp');
+    }
+}
+
+@media (min-width: 1440px) and (min-resolution: 2dppx) {
+    .new {
+        background-image: url('../../images/new/desktop-2x.webp');
+        background-position: left;
     }
 }
 
@@ -85,7 +124,6 @@
 
 .new__link {
     display: block;
-    max-width: 190px;
 }
 
 @media (min-width: 690px) {

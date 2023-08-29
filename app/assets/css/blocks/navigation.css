@@ -200,6 +200,14 @@
     color: white;
 }
 
+/* Logo */
+
+.navigation__cart-logo {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
 /* Menu */
 
 @media (max-width: 509px) {
