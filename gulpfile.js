@@ -126,6 +126,20 @@ export const cleanBuild = () => {
     return deleteAsync('build');
 };
 
+export const build = gulp.series(
+    cleanBuild,
+    copy,
+    minifyImages,
+    gulp.parallel(
+        optimizeFonts,
+        minifyCSS,
+        minifyJS,
+        minifyHTML,
+        createAvif,
+        createWebP,
+    ),
+);
+
 export default gulp.series(
     cleanBuild,
     copy,

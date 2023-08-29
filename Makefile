@@ -11,4 +11,4 @@ fix:
 	npx stylelint 'app/assets/css/*.css' --fix
 
 build:
-	gulp
+	gulp build
