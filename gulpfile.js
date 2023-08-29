@@ -99,8 +99,13 @@ export const optimizeFonts = () => {
 /* Copy */
 
 export const copy = () => {
-    return gulp.src('app/assets/images/icons.svg')
-        .pipe(gulp.dest('build/assets/images'))
+    return gulp.src([
+        'app/assets/images/icons.svg',
+        'app/assets/fonts/*.{woff2, woff, ttf}',
+    ], {
+        base: 'app'
+    })
+        .pipe(gulp.dest('build'))
 };
 
 /* Watching */
@@ -131,7 +136,6 @@ export const build = gulp.series(
     copy,
     minifyImages,
     gulp.parallel(
-        optimizeFonts,
         minifyCSS,
         minifyJS,
         minifyHTML,
@@ -145,7 +149,6 @@ export default gulp.series(
     copy,
     minifyImages,
     gulp.parallel(
-        optimizeFonts,
         minifyCSS,
         minifyJS,
         minifyHTML,
