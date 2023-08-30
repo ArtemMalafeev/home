@@ -1,0 +1,12 @@
+{
+    "icons": [
+        {
+            "src": "assets/images/favicons/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "name": "Реплики картин от Ink. House",
+    "short_name": "Ink. House",
+    "desctiption": "Сайт по продаже реплик картин"
+}

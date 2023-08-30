@@ -57,7 +57,8 @@ export const minifyJS = () => {
 
 export const minifyImages = () => {
     return gulp.src([
-        'app/assets/images/**/*.{jpg,png}'
+        'app/assets/images/**/*.{jpg,png}',
+        '!app/assets/images/favicons/*.*',
     ])
         .pipe(imagemin())
         .pipe(gulp.dest('build/assets/images'))
@@ -67,7 +68,8 @@ export const minifyImages = () => {
 
 export const createWebP = () => {
     return gulp.src([
-        'app/assets/images/**/*.{jpg,png}'
+        'app/assets/images/**/*.{jpg,png}',
+        '!app/assets/images/favicons/*.*', 
     ])
         .pipe(webp({ quality: 50 }))
         .pipe(gulp.dest('build/assets/images'))
@@ -77,7 +79,8 @@ export const createWebP = () => {
 
 export const createAvif = () => {
     return gulp.src([
-        'app/assets/images/**/*.{jpg,png}'
+        'app/assets/images/**/*.{jpg,png}',
+        '!app/assets/images/favicons/*.*',
     ])
         .pipe(avif())
         .pipe(gulp.dest('build/assets/images'))
@@ -102,6 +105,9 @@ export const copy = () => {
     return gulp.src([
         'app/assets/images/icons.svg',
         'app/assets/fonts/*.{woff2, woff, ttf}',
+        'app/*.ico',
+        'app/*.webmanifest',
+        'app/assets/images/favicons/*.*',
     ], {
         base: 'app'
     })
