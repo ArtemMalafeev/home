@@ -16,7 +16,6 @@
 /* Blocks */
 
 @import url('blocks/page.css');
-@import url('blocks/main.css');
 @import url('blocks/container.css');
 @import url('blocks/link.css');
 @import url('blocks/button.css');

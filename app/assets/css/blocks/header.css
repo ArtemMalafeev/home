@@ -4,8 +4,8 @@
 /* Header */
 
 .header {
-    position: fixed;
-    z-index: 5000;
+    position: relative;
+    z-index: 2000;
     width: 100%;
     height: 130px;
 }
