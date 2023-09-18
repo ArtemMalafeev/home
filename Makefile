@@ -12,3 +12,6 @@ fix:
 
 build:
 	gulp build
+
+local:
+	gulp
